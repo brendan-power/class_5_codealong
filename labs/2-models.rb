@@ -21,6 +21,42 @@ Salesperson.destroy_all
 
 # 2. insert 1-2 rows in salespeople table.
 
+salesperson1 = Salesperson.new
+salesperson1["first_name"] = "Benjamin"
+salesperson1["last_name"] = "Block"
+salesperson1["email"] = "ben@test.com"
+salesperson1.save
+
+salesperson2 = Salesperson.new
+salesperson2["first_name"] = "Brian"
+salesperson2["last_name"] = "Eng"
+salesperson2["email"] = "brian@test.com"
+salesperson2.save
+
+
+
+all_salespeople = Salesperson.all
+
+for salesrep in all_salespeople
+
+    first_name = salesrep["first_name"]
+    last_name = salesrep["last_name"]
+    puts "#{first_name} #{last_name}"
+
+end
+
+
+
+
+
+
+# create_table "salespeople", force: :cascade do |t|
+#     t.string "first_name"
+#     t.string "last_name"
+#     t.string "email"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+
 # 3. write code to display how many salespeople rows are in the database
 
 # ---------------------------------
